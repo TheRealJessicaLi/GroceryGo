@@ -7,4 +7,10 @@
         android:layout_height="match_parent"
         tools:context=".Onboarding.UserInfoActivity">
 
+    <LinearLayout
+            android:id="@+id/user_info_activity_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"/>
+
 </android.support.constraint.ConstraintLayout>
