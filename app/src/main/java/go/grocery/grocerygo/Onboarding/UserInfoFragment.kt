@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import go.grocery.grocerygo.R
-import android.widget.LinearLayout
 import kotlinx.android.synthetic.main.fragment_user_info.*
 import android.content.Intent
 import go.grocery.grocerygo.SelectGroceries.ShoppingInstructionsActivity

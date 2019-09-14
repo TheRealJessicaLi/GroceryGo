@@ -1,40 +1,164 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:tools="http://schemas.android.com/tools"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              tools:context=".SelectGroceries.SelectGroceriesFragment"
-              android:orientation="vertical">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".SelectGroceries.SelectGroceriesFragment">
 
     <TextView
+            android:id="@+id/header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Select your grocery list"
             android:padding="10dp"/>
 
-    <LinearLayout
+    <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:orientation="horizontal"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp">
+            android:layout_height="match_parent"
+            android:layout_above="@+id/next_button"
+    android:layout_below="@id/header">
 
-        <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+        <LinearLayout
+                android:id="@+id/grocery_list_select"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:orientation="vertical">
 
-        <TextView android:layout_width="match_parent"
-                  android:layout_height="match_parent"
-                  android:text="Bread"/>
+            <CheckBox android:id="@+id/checkbox_apples"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="apples"
+                      android:onClick="onCheckboxClicked"/>
 
-    </LinearLayout>
+            <CheckBox android:id="@+id/checkbox_bananas"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="bananas"
+                      android:onClick="onCheckboxClicked"/>
+
+            <CheckBox android:id="@+id/checkbox_beans"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="beans"
+                      android:onClick="onCheckboxClicked"/>
+
+            <CheckBox android:id="@+id/checkbox_bellpeppers"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="bell peppers"
+                      android:onClick="onCheckboxClicked"/>
+
+            <CheckBox android:id="@+id/checkbox_bread"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="bread"
+                      android:onClick="onCheckboxClicked"/>
+
+            <CheckBox android:id="@+id/checkbox_brusselsprouts"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="brussel sprouts"
+                      android:onClick="onCheckboxClicked"/>
+
+            <CheckBox android:id="@+id/checkbox_butter"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="butter"
+                      android:onClick="onCheckboxClicked"/>
+
+            <CheckBox android:id="@+id/checkbox_carrots"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="carrots"
+                      android:onClick="onCheckboxClicked"/>
+
+            <CheckBox android:id="@+id/checkbox_cereal"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="cereal"
+                      android:onClick="onCheckboxClicked"/>
+
+            <CheckBox android:id="@+id/checkbox_cookies"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="cookies"
+                      android:onClick="onCheckboxClicked"/>
+
+            <CheckBox android:id="@+id/checkbox_corn"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="corn"
+                      android:onClick="onCheckboxClicked"/>
+
+            <CheckBox android:id="@+id/checkbox_cucumbers"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="cucumbers"
+                      android:onClick="onCheckboxClicked"/>
+
+            <CheckBox android:id="@+id/checkbox_greenonions"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="green onions"
+                      android:onClick="onCheckboxClicked"/>
+
+            <CheckBox android:id="@+id/checkbox_lettuce"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="lettuce"
+                      android:onClick="onCheckboxClicked"/>
+
+            <CheckBox android:id="@+id/checkbox_milk"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="milk"
+                      android:onClick="onCheckboxClicked"/>
+
+            <CheckBox android:id="@+id/checkbox_oliveoil"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="olive oil"
+                      android:onClick="onCheckboxClicked"/>
+
+            <CheckBox android:id="@+id/checkbox_pasta"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="pasta"
+                      android:onClick="onCheckboxClicked"/>
+
+            <CheckBox android:id="@+id/checkbox_potatoes"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="potatoes"
+                      android:onClick="onCheckboxClicked"/>
+
+            <CheckBox android:id="@+id/checkbox_salami"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="salami"
+                      android:onClick="onCheckboxClicked"/>
+
+            <CheckBox android:id="@+id/checkbox_tomatoes"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="tomatoes"
+                      android:onClick="onCheckboxClicked"/>
+
+        </LinearLayout>
+
+    </ScrollView>
 
     <Button
             android:id="@+id/next_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:text="Continue"
-            android:background="@drawable/button_background"/>
+            android:layout_width="120dp"
+            android:layout_height="35dp"
+            android:layout_centerHorizontal="true"
+            android:text="Finalize"
+            android:textAllCaps="false"
+            android:background="@drawable/button_background"
+            android:layout_alignParentBottom="true"/>
 
-</LinearLayout>
+</RelativeLayout>

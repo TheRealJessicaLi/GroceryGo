@@ -6,29 +6,91 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".Onboarding.UserInfoFragment">
+    
+    <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="30dp"/>
 
     <LinearLayout
-            android:id="@+id/name_field"
+            android:id="@+id/firstname_field"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_marginLeft="25dp"
             android:layout_marginRight="25dp"
             android:layout_marginTop="50dp"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toBottomOf="@id/logo">
 
         <TextView
-                android:id="@+id/enter_name_prompt"
+                android:id="@+id/enter_firstname_prompt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Please enter your name:"
+                android:text="First Name*"
+                android:textColor="@color/black"
                 android:padding="5dp"/>
 
         <EditText
-                android:id="@+id/user_name"
+                android:id="@+id/user_firstname"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:background="@drawable/edit_text_background"/>
+                android:backgroundTint="@color/black"
+                android:layout_height="25dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/lastname_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/firstname_field">
+
+        <TextView
+                android:id="@+id/enter_lastname_prompt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Last Name*"
+                android:padding="5dp"/>
+
+        <EditText
+                android:id="@+id/user_lastname"
+                android:layout_width="match_parent"
+                android:backgroundTint="@color/black"
+                android:layout_height="25dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/phone_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/lastname_field">
+
+        <TextView
+                android:id="@+id/enter_phone_prompt"
+                android:layout_width="match_parent"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                android:text="Phone Number"
+                android:padding="5dp"/>
+
+        <EditText
+                android:id="@+id/user_phone"
+                android:layout_width="match_parent"
+                android:backgroundTint="@color/black"
+                android:layout_height="25dp"/>
 
     </LinearLayout>
 
@@ -40,32 +102,33 @@
             android:layout_marginLeft="25dp"
             android:layout_marginRight="25dp"
             android:layout_marginTop="20dp"
-            app:layout_constraintTop_toBottomOf="@+id/name_field">
+            app:layout_constraintTop_toBottomOf="@+id/phone_field">
 
         <TextView
                 android:id="@+id/enter_location_prompt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Please enter your location:"
+                android:textColor="@color/black"
+                android:text="Location*"
                 android:padding="5dp"/>
 
         <EditText
                 android:id="@+id/user_location"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:background="@drawable/edit_text_background"/>
+                android:backgroundTint="@color/black"
+                android:layout_height="25dp"/>
 
     </LinearLayout>
 
     <Button
             android:id="@+id/next_button"
             android:layout_margin="30dp"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="120dp"
+            android:layout_height="35dp"
             app:layout_constraintTop_toBottomOf="@id/location_field"
-            android:background="@drawable/button_background"
-            android:text="Next"/>
+            android:textAllCaps="false"
+            android:text="Next"
+            android:background="@drawable/button_background"/>
 
 </android.support.constraint.ConstraintLayout>

@@ -2,6 +2,7 @@ package go.grocery.grocerygo.SelectGroceries
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import go.grocery.grocerygo.R
 
 class SelectGroceriesActivity : AppCompatActivity() {
@@ -15,5 +16,9 @@ class SelectGroceriesActivity : AppCompatActivity() {
         fragmentTransaction.replace(R.id.select_activity_content, SelectGroceriesFragment())
         fragmentTransaction.addToBackStack(null)
         fragmentTransaction.commit()
+    }
+
+    fun onCheckboxClicked(view: View){
+        SelectGroceriesFragment().onCheckboxClicked(view)
     }
 }
