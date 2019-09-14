@@ -22,8 +22,6 @@
         </activity>
         <activity android:name=".SelectGroceries.SelectGroceriesActivity">
         </activity>
-        <activity android:name=".SelectGroceries.SummaryListActivity">
-        </activity>
         <activity android:name=".SelectGroceries.ShoppingInstructionsActivity">
         </activity>
     </application>
