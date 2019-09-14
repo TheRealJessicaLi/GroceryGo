@@ -16,6 +16,14 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name=".Onboarding.UserInfoActivity">
+        </activity>
+        <activity android:name=".Results.SearchResultsActivity">
+        </activity>
+        <activity android:name=".SelectGroceries.SelectGroceriesActivity">
+        </activity>
+        <activity android:name=".SelectGroceries.SummaryListActivity">
+        </activity>
     </application>
 
 </manifest>
