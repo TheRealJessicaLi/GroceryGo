@@ -4,10 +4,11 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import go.grocery.grocerygo.R
 import com.google.firebase.firestore.FirebaseFirestore
+import go.grocery.grocerygo.SelectGroceries.SummaryListItem
 
 class SearchResultsActivity : AppCompatActivity() {
 
-    data class Supermarket(val name : String, val totalPrice : Double, val items : HashMap<String, Double>)
+    data class Supermarket(val name : String, val totalPrice : Double, val items : ArrayList<SummaryListItem>)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -62,9 +63,24 @@ class SearchResultsActivity : AppCompatActivity() {
         for ((k, v) in nofrillsItems)
             nofrills += v
 
-        if (walmart <= zehrs && walmart <= nofrills) return Supermarket("Walmart", walmart, walmartItems)
-        if (zehrs <= walmart && zehrs <= nofrills) return Supermarket("Zehrs", zehrs, zehrsItems)
-        return Supermarket("No Frills", nofrills, nofrillsItems)
+        val summaryList = ArrayList<SummaryListItem>()
+
+        if (walmart <= zehrs && walmart <= nofrills) {
+            for ((k,v) in walmartItems) {
+                summaryList.add(SummaryListItem(k, v.toString()))
+            }
+            return Supermarket("Walmart", walmart, summaryList)
+        }
+        if (zehrs <= walmart && zehrs <= nofrills) {
+            for ((k,v) in walmartItems) {
+                summaryList.add(SummaryListItem(k, v.toString()))
+            }
+            return Supermarket("Zehrs", zehrs, summaryList)
+        }
+        for ((k,v) in walmartItems) {
+            summaryList.add(SummaryListItem(k, v.toString()))
+        }
+        return Supermarket("No Frills", nofrills, summaryList)
 
     }
 }

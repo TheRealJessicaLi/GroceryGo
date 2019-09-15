@@ -4,7 +4,7 @@ class SummaryListItem {
     private lateinit var str1: String
     private lateinit var str2: String
 
-    fun CustomObject(str1: String, str2: String){
+    constructor(str1: String, str2: String){
         this.str1 = str1
         this.str2 = str2
     }
