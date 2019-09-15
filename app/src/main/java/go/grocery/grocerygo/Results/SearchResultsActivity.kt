@@ -12,14 +12,67 @@ class SearchResultsActivity : AppCompatActivity() {
 
     data class Supermarket(val name : String, val totalPrice : Double, val items : ArrayList<SummaryListItem>)
 
+    val walmartItems = HashMap<String, Double>()
+    val zehrsItems = HashMap<String, Double>()
+    val nofrillsItems = HashMap<String, Double>()
+    var numReceived = 0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_search_results)
+
+        walmartItems.clear()
+        zehrsItems.clear()
+        nofrillsItems.clear()
+
+        val db = FirebaseFirestore.getInstance()
+
+        db.collection("walmart")
+            .get()
+            .addOnSuccessListener { result ->
+                for (document in result) {
+                    if (intent.getStringArrayListExtra("shopping_list").contains(document.id) ) {
+                        walmartItems[document.getString("name") as String] = document.getDouble("price") as Double
+                    }
+                }
+                checkDataReceived()
+            }
+
+        db.collection("zehrs")
+            .get()
+            .addOnSuccessListener { result ->
+                for (document in result) {
+                    if (intent.getStringArrayListExtra("shopping_list").contains(document.id) ) {
+                        zehrsItems[document.getString("name") as String] = document.getDouble("price") as Double
+                    }
+                }
+                checkDataReceived()
+            }
+
+        db.collection("nofrills")
+            .get()
+            .addOnSuccessListener { result ->
+                for (document in result) {
+                    if (intent.getStringArrayListExtra("shopping_list").contains(document.id) ) {
+                        nofrillsItems[document.getString("name") as String] = document.get("price") as Double
+                    }
+                }
+                checkDataReceived()
+            }
+
+    }
+
+    fun checkDataReceived() {
+        if (numReceived == 2) {
+            onDataReceived()
+        } else {
+            numReceived++
+        }
     }
 
     fun onDataReceived(){
         progressBar.visibility = View.GONE
-        val supermarket = getItems(intent.getStringArrayListExtra("shopping_list"))
+        val supermarket = getItems()
         val bundle = Bundle()
         val fragmentTransaction = supportFragmentManager.beginTransaction()
         bundle.putString("supermarket_name", supermarket.name)
@@ -31,42 +84,7 @@ class SearchResultsActivity : AppCompatActivity() {
         fragmentTransaction.commit()
     }
 
-    fun getItems(names : Collection<String>) : Supermarket {
-        val db = FirebaseFirestore.getInstance()
-
-        val walmartItems = HashMap<String, Double>()
-        val zehrsItems = HashMap<String, Double>()
-        val nofrillsItems = HashMap<String, Double>()
-
-        db.collection("walmart")
-            .get()
-            .addOnSuccessListener { result ->
-                for (document in result) {
-                    if (names.contains(document.id) ) {
-                        walmartItems[document.getString("name") as String] = document.getDouble("price") as Double
-                    }
-                }
-            }
-
-        db.collection("zehrs")
-            .get()
-            .addOnSuccessListener { result ->
-                for (document in result) {
-                    if (names.contains(document.id) ) {
-                        zehrsItems[document.getString("name") as String] = document.getDouble("price") as Double
-                    }
-                }
-            }
-
-        db.collection("nofrills")
-            .get()
-            .addOnSuccessListener { result ->
-                for (document in result) {
-                    if (names.contains(document.id) ) {
-                        nofrillsItems[document.getString("name") as String] = document.get("price") as Double
-                    }
-                }
-            }
+    fun getItems() : Supermarket {
 
         var walmart = 0.0
         var zehrs = 0.0
