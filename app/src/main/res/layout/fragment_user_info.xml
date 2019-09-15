@@ -42,6 +42,7 @@
                 android:id="@+id/user_firstname"
                 android:layout_width="match_parent"
                 android:backgroundTint="#C6C6C6"
+                android:textColor="#C6C6C6"
                 android:layout_height="wrap_content"/>
 
     </LinearLayout>
@@ -69,6 +70,7 @@
                 android:id="@+id/user_lastname"
                 android:layout_width="match_parent"
                 android:backgroundTint="#C6C6C6"
+                android:textColor="#C6C6C6"
                 android:layout_height="wrap_content"/>
 
     </LinearLayout>
@@ -96,6 +98,7 @@
                 android:id="@+id/user_phone"
                 android:layout_width="match_parent"
                 android:backgroundTint="#C6C6C6"
+                android:textColor="#C6C6C6"
                 android:layout_height="wrap_content"/>
 
     </LinearLayout>
@@ -123,6 +126,7 @@
                 android:id="@+id/user_location"
                 android:layout_width="match_parent"
                 android:backgroundTint="#C6C6C6"
+                android:textColor="#C6C6C6"
                 android:layout_height="wrap_content"/>
 
     </LinearLayout>

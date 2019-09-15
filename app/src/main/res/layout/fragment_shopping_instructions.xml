@@ -27,8 +27,8 @@
             android:layout_height="wrap_content"
             android:text="Add items to your list and click ‘Finalize’ to see our recommended shopping location!"
             android:textColor="#C6C6C6"
-            android:textSize="15dp"
-            android:padding="50dp"
+            android:textSize="15sp"
+            android:padding="40dp"
             android:gravity="center"/>
 
     <TextView
@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:text="John's Shopping List:"
             android:textColor="#FFFFFF"
-            android:textSize="30dp"
+            android:textSize="30sp"
             android:paddingLeft="25dp"
             android:paddingRight="25dp"
             android:gravity="center"
@@ -49,23 +49,28 @@
             android:layout_height="wrap_content"
             android:text="Currently, there are no items on your list."
             android:textColor="@color/black"
-            android:textSize="15dp"
-            android:padding="25dp"
-            android:layout_above="@id/next_button"
-            android:layout_below="@id/shopping_title"
-            android:layout_marginTop="50dp"
-            android:gravity="center"/>
+            android:textSize="15sp"
+            android:paddingTop="50dp"
+            android:gravity="center"
+            android:layout_above="@id/add_button"
+            android:layout_below="@id/shopping_title"/>
+    <View
+            android:id="@+id/divider"
+            android:layout_width="295dp"
+            android:layout_centerHorizontal="true"
+            android:layout_height="1dp"
+            android:background="#C6C6C6"
+            android:layout_below="@id/no_items"/>
 
     <Button
-            android:id="@+id/next_button"
-            android:layout_margin="30dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/location_field"
+            android:id="@+id/add_button"
+            android:layout_width="120dp"
+            android:layout_height="35dp"
+            android:text="ADD TO LIST"
+            android:layout_margin="35dp"
             android:background="@drawable/button_background"
-            android:text="Add to List"
             android:layout_gravity="center_horizontal"
-            android:layout_below="@id/shopping_title"
-            android:layout_centerVertical="true"/>/>
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"/>
 
 </RelativeLayout>
