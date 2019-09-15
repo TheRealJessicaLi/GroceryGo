@@ -27,7 +27,7 @@ class SearchResultsFragment : Fragment() {
         val items = arguments!!.getSerializable("grocery_items")
 
         store_name.text = supermarketName
-        total_price.text = getString(R.string.dollar_price, totalPrice.toString())
+        total_price.text = getString(R.string.dollar_price, String.format("%.2f", totalPrice))
         val customAdapter = SummaryListAdapter(this.requireContext(), items as ArrayList<SummaryListItem>)
         grocery_list.adapter = customAdapter
 
