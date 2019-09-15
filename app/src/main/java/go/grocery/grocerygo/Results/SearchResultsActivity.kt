@@ -72,12 +72,12 @@ class SearchResultsActivity : AppCompatActivity() {
             return Supermarket("Walmart", walmart, summaryList)
         }
         if (zehrs <= walmart && zehrs <= nofrills) {
-            for ((k,v) in walmartItems) {
+            for ((k,v) in zehrsItems) {
                 summaryList.add(SummaryListItem(k, v.toString()))
             }
             return Supermarket("Zehrs", zehrs, summaryList)
         }
-        for ((k,v) in walmartItems) {
+        for ((k,v) in nofrillsItems) {
             summaryList.add(SummaryListItem(k, v.toString()))
         }
         return Supermarket("No Frills", nofrills, summaryList)
