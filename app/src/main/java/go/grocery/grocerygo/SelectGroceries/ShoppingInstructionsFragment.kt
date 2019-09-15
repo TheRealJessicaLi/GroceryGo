@@ -12,6 +12,8 @@ import android.view.ViewGroup
 import go.grocery.grocerygo.R
 import kotlinx.android.synthetic.main.fragment_shopping_instructions.*
 import kotlinx.android.synthetic.main.fragment_user_info.*
+import go.grocery.grocerygo.ApplicationVariables
+
 
 class ShoppingInstructionsFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -20,6 +22,9 @@ class ShoppingInstructionsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        shopping_title.text = getString(R.string.user_shopping_list,
+            (activity!!.application as ApplicationVariables).username)
 
         add_button.setOnClickListener {
             val myIntent = Intent(activity, SelectGroceriesActivity::class.java)

@@ -8,7 +8,10 @@ import android.view.ViewGroup
 import go.grocery.grocerygo.R
 import kotlinx.android.synthetic.main.fragment_user_info.*
 import android.content.Intent
+import go.grocery.grocerygo.ApplicationVariables
 import go.grocery.grocerygo.SelectGroceries.ShoppingInstructionsActivity
+
+
 
 
 class UserInfoFragment : Fragment() {
@@ -20,6 +23,8 @@ class UserInfoFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         next_button.setOnClickListener {
+            (activity!!.application as ApplicationVariables).username = user_firstname.text.toString()
+
             val myIntent = Intent(activity, ShoppingInstructionsActivity::class.java)
             activity!!.startActivity(myIntent)
         }
