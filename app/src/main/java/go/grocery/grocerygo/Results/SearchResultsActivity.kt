@@ -2,9 +2,11 @@ package go.grocery.grocerygo.Results
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import go.grocery.grocerygo.R
 import com.google.firebase.firestore.FirebaseFirestore
 import go.grocery.grocerygo.SelectGroceries.SummaryListItem
+import kotlinx.android.synthetic.main.activity_search_results.*
 
 class SearchResultsActivity : AppCompatActivity() {
 
@@ -13,6 +15,10 @@ class SearchResultsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_search_results)
+    }
+
+    fun onDataReceived(){
+        progressBar.visibility = View.GONE
         val supermarket = getItems(intent.getStringArrayListExtra("shopping_list"))
         val bundle = Bundle()
         val fragmentTransaction = supportFragmentManager.beginTransaction()
