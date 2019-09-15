@@ -18,13 +18,12 @@ private var shoppingList = ArrayList<String>()
 
 class SelectGroceriesFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        shoppingList!!.clear()
         return inflater.inflate(R.layout.fragment_select_groceries, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-
 
         next_button.setOnClickListener {
             val myIntent = Intent(activity, SearchResultsActivity::class.java)
