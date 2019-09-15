@@ -11,6 +11,7 @@ class SearchResultsActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setSupportActionBar(findViewById(R.id.my_toolbar))
         setContentView(R.layout.activity_search_results)
     }
 

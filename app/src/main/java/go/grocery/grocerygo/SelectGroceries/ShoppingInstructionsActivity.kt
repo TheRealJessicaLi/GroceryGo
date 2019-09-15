@@ -9,7 +9,7 @@ class ShoppingInstructionsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_shopping_instructions)
-
+        setSupportActionBar(findViewById(R.id.my_toolbar))
         val fragmentTransaction = supportFragmentManager.beginTransaction()
         //userInfoFragment.setArguments(bundle)
         fragmentTransaction.replace(R.id.shopping_activity_content, ShoppingInstructionsFragment())

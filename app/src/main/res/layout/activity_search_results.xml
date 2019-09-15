@@ -6,7 +6,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".Results.SearchResultsActivity">
-
+    <android.support.v7.widget.Toolbar
+            android:id="@+id/my_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#008577"
+            android:elevation="4dp"
+            android:theme="@style/ToolbarTheme"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
     <LinearLayout
             android:id="@+id/search_activity_content"
             android:layout_width="match_parent"
