@@ -1,35 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:tools="http://schemas.android.com/tools"
-              xmlns:app="http://schemas.android.com/apk/res-auto"
-              android:layout_width="match_parent" android:layout_height="match_parent"
-              tools:context=".SelectGroceries.ShoppingInstructionsFragment"
-              android:orientation="vertical">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent" android:layout_height="match_parent"
+                tools:context=".SelectGroceries.ShoppingInstructionsFragment"
+                android:background="#BEE4E4">
+    <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/shopping_img"
+            android:layout_alignParentTop="true"
+            android:adjustViewBounds="true"/>
+    <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/shopping_rect"
+            android:layout_alignParentTop="true"
+            android:adjustViewBounds="true"
+            android:layout_marginTop="170dp"
+            android:scaleX="0.85"
+            android:scaleY="0.9"/>
 
     <TextView
+            android:id="@+id/shopping_instruct"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Add items to your list and click ‘Finalize’ to see our recommended shopping location!"
-            android:textColor="@color/black"
+            android:textColor="#C6C6C6"
             android:textSize="15dp"
-            android:padding="25dp"/>
+            android:padding="50dp"
+            android:gravity="center"/>
 
     <TextView
+            android:id="@+id/shopping_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="My Shopping List:"
-            android:textColor="@color/black"
+            android:text="John's Shopping List:"
+            android:textColor="#FFFFFF"
             android:textSize="30dp"
             android:paddingLeft="25dp"
-            android:paddingRight="25dp"/>
+            android:paddingRight="25dp"
+            android:gravity="center"
+            android:layout_below="@id/shopping_instruct"/>
 
     <TextView
+            android:id="@+id/no_items"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Currently, there are no items on your list."
             android:textColor="@color/black"
             android:textSize="15dp"
-            android:padding="25dp"/>
+            android:padding="25dp"
+            android:layout_above="@id/next_button"
+            android:layout_below="@id/shopping_title"
+            android:layout_marginTop="50dp"
+            android:gravity="center"/>
 
     <Button
             android:id="@+id/next_button"
@@ -39,6 +64,8 @@
             app:layout_constraintTop_toBottomOf="@id/location_field"
             android:background="@drawable/button_background"
             android:text="Add to List"
-            android:layout_gravity="center_horizontal"/>
+            android:layout_gravity="center_horizontal"
+            android:layout_below="@id/shopping_title"
+            android:layout_centerVertical="true"/>/>
 
-</LinearLayout>
+</RelativeLayout>
