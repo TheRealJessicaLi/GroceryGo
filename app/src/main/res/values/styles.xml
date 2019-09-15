@@ -8,4 +8,8 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="BlueCheckbox">
+        <item name="colorAccent">#039BE8</item>
+    </style>
+
 </resources>

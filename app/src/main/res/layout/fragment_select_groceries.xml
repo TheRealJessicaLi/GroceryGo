@@ -36,8 +36,8 @@
             android:layout_height="match_parent"
             android:layout_above="@+id/next_button"
             android:layout_below="@id/header">
-            <!--android:background="@drawable/select_rect"-->
-            <!--android:scaleX="0.85">-->
+        <!--android:background="@drawable/select_rect"-->
+        <!--android:scaleX="0.85">-->
 
         <LinearLayout
                 android:id="@+id/grocery_list_select"
@@ -57,7 +57,8 @@
                       android:layout_marginLeft="18dp"
                       android:textSize="17sp"
                       android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-                      android:onClick="onCheckboxClicked"/>
+                      android:onClick="onCheckboxClicked"
+                      android:theme="@style/BlueCheckbox"/>
 
             <CheckBox android:id="@+id/checkbox_beans"
                       android:layout_width="match_parent"
@@ -68,7 +69,8 @@
                       android:layout_marginLeft="18dp"
                       android:textSize="17sp"
                       android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-                      android:onClick="onCheckboxClicked"/>
+                      android:onClick="onCheckboxClicked"
+                      android:theme="@style/BlueCheckbox"/>
 
             <CheckBox android:id="@+id/checkbox_bellpeppers"
                       android:layout_width="match_parent"
@@ -79,7 +81,8 @@
                       android:layout_marginLeft="18dp"
                       android:textSize="17sp"
                       android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-                      android:onClick="onCheckboxClicked"/>
+                      android:onClick="onCheckboxClicked"
+                      android:theme="@style/BlueCheckbox"/>
 
             <CheckBox android:id="@+id/checkbox_bread"
                       android:layout_width="match_parent"
@@ -90,7 +93,8 @@
                       android:layout_marginLeft="18dp"
                       android:textSize="17sp"
                       android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-                      android:onClick="onCheckboxClicked"/>
+                      android:onClick="onCheckboxClicked"
+                      android:theme="@style/BlueCheckbox"/>
 
             <CheckBox android:id="@+id/checkbox_brusselsprouts"
                       android:layout_width="match_parent"
@@ -101,7 +105,8 @@
                       android:layout_marginLeft="18dp"
                       android:textSize="17sp"
                       android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-                      android:onClick="onCheckboxClicked"/>
+                      android:onClick="onCheckboxClicked"
+                      android:theme="@style/BlueCheckbox"/>
 
             <CheckBox android:id="@+id/checkbox_butter"
                       android:layout_width="match_parent"
@@ -112,7 +117,8 @@
                       android:layout_marginLeft="18dp"
                       android:textSize="17sp"
                       android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-                      android:onClick="onCheckboxClicked"/>
+                      android:onClick="onCheckboxClicked"
+                      android:theme="@style/BlueCheckbox"/>
 
             <CheckBox android:id="@+id/checkbox_carrots"
                       android:layout_width="match_parent"
@@ -123,7 +129,8 @@
                       android:layout_marginLeft="18dp"
                       android:textSize="17sp"
                       android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-                      android:onClick="onCheckboxClicked"/>
+                      android:onClick="onCheckboxClicked"
+                      android:theme="@style/BlueCheckbox"/>
 
             <CheckBox android:id="@+id/checkbox_cereal"
                       android:layout_width="match_parent"
@@ -134,7 +141,8 @@
                       android:layout_marginLeft="18dp"
                       android:textSize="17sp"
                       android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-                      android:onClick="onCheckboxClicked"/>
+                      android:onClick="onCheckboxClicked"
+                      android:theme="@style/BlueCheckbox"/>
 
             <CheckBox android:id="@+id/checkbox_cookies"
                       android:layout_width="match_parent"
@@ -145,7 +153,8 @@
                       android:layout_marginLeft="18dp"
                       android:textSize="17sp"
                       android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-                      android:onClick="onCheckboxClicked"/>
+                      android:onClick="onCheckboxClicked"
+                      android:theme="@style/BlueCheckbox"/>
 
             <CheckBox android:id="@+id/checkbox_corn"
                       android:layout_width="match_parent"
@@ -156,7 +165,8 @@
                       android:layout_marginLeft="18dp"
                       android:textSize="17sp"
                       android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-                      android:onClick="onCheckboxClicked"/>
+                      android:onClick="onCheckboxClicked"
+                      android:theme="@style/BlueCheckbox"/>
 
             <CheckBox android:id="@+id/checkbox_cucumbers"
                       android:layout_width="match_parent"
@@ -167,7 +177,8 @@
                       android:layout_marginLeft="18dp"
                       android:textSize="17sp"
                       android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-                      android:onClick="onCheckboxClicked"/>
+                      android:onClick="onCheckboxClicked"
+                      android:theme="@style/BlueCheckbox"/>
 
             <CheckBox android:id="@+id/checkbox_greenonions"
                       android:layout_width="match_parent"
@@ -178,7 +189,8 @@
                       android:layout_marginLeft="18dp"
                       android:textSize="17sp"
                       android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-                      android:onClick="onCheckboxClicked"/>
+                      android:onClick="onCheckboxClicked"
+                      android:theme="@style/BlueCheckbox"/>
 
             <CheckBox android:id="@+id/checkbox_lettuce"
                       android:layout_width="match_parent"
@@ -189,7 +201,8 @@
                       android:layout_marginLeft="18dp"
                       android:textSize="17sp"
                       android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-                      android:onClick="onCheckboxClicked"/>
+                      android:onClick="onCheckboxClicked"
+                      android:theme="@style/BlueCheckbox"/>
 
             <CheckBox android:id="@+id/checkbox_milk"
                       android:layout_width="match_parent"
@@ -200,7 +213,8 @@
                       android:layout_marginLeft="18dp"
                       android:textSize="17sp"
                       android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-                      android:onClick="onCheckboxClicked"/>
+                      android:onClick="onCheckboxClicked"
+                      android:theme="@style/BlueCheckbox"/>
 
             <CheckBox android:id="@+id/checkbox_oliveoil"
                       android:layout_width="match_parent"
@@ -211,7 +225,8 @@
                       android:layout_marginLeft="18dp"
                       android:textSize="17sp"
                       android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-                      android:onClick="onCheckboxClicked"/>
+                      android:onClick="onCheckboxClicked"
+                      android:theme="@style/BlueCheckbox"/>
 
             <CheckBox android:id="@+id/checkbox_pasta"
                       android:layout_width="match_parent"
@@ -222,7 +237,8 @@
                       android:layout_marginLeft="18dp"
                       android:textSize="17sp"
                       android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-                      android:onClick="onCheckboxClicked"/>
+                      android:onClick="onCheckboxClicked"
+                      android:theme="@style/BlueCheckbox"/>
 
             <CheckBox android:id="@+id/checkbox_potatoes"
                       android:layout_width="match_parent"
@@ -233,7 +249,8 @@
                       android:layout_marginLeft="18dp"
                       android:textSize="17sp"
                       android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-                      android:onClick="onCheckboxClicked"/>
+                      android:onClick="onCheckboxClicked"
+                      android:theme="@style/BlueCheckbox"/>
 
             <CheckBox android:id="@+id/checkbox_salami"
                       android:layout_width="match_parent"
@@ -244,7 +261,8 @@
                       android:layout_marginLeft="18dp"
                       android:textSize="17sp"
                       android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-                      android:onClick="onCheckboxClicked"/>
+                      android:onClick="onCheckboxClicked"
+                      android:theme="@style/BlueCheckbox"/>
 
             <CheckBox android:id="@+id/checkbox_tomatoes"
                       android:layout_width="match_parent"
@@ -255,7 +273,8 @@
                       android:layout_marginLeft="18dp"
                       android:textSize="17sp"
                       android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-                      android:onClick="onCheckboxClicked"/>
+                      android:onClick="onCheckboxClicked"
+                      android:theme="@style/BlueCheckbox"/>
 
         </LinearLayout>
 
