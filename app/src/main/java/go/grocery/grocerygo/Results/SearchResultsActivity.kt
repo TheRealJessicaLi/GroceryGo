@@ -13,6 +13,16 @@ class SearchResultsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_search_results)
+        val supermarket = getItems(intent.getStringArrayListExtra("shopping_list"))
+        val bundle = Bundle()
+        val fragmentTransaction = supportFragmentManager.beginTransaction()
+        bundle.putString("supermarket_name", supermarket.name)
+        bundle.putDouble("total_price", supermarket.totalPrice)
+        bundle.putSerializable("grocery_items", supermarket.items)
+        val fragment = SearchResultsFragment()
+        fragment.arguments = bundle
+        fragmentTransaction.replace(R.id.search_activity_content, fragment)
+        fragmentTransaction.commit()
     }
 
     fun getItems(names : Collection<String>) : Supermarket {

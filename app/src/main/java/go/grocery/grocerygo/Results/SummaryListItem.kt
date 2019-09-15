@@ -1,6 +1,8 @@
 package go.grocery.grocerygo.SelectGroceries
 
-class SummaryListItem {
+import java.io.Serializable
+
+class SummaryListItem : Serializable{
     private lateinit var str1: String
     private lateinit var str2: String
 
