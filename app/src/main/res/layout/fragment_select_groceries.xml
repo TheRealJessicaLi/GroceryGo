@@ -21,14 +21,23 @@
             android:layout_alignParentTop="true"
             android:adjustViewBounds="true"/>
 
+    <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/shopping_rect"
+            android:layout_alignParentTop="true"
+            android:adjustViewBounds="true"
+            android:scaleX="0.9"
+            android:scaleY="1.2"/>
+
 
     <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_above="@+id/next_button"
-            android:layout_below="@id/header"
-            android:background="@drawable/select_rect"
-            android:scaleX="0.85">
+            android:layout_below="@id/header">
+            <!--android:background="@drawable/select_rect"-->
+            <!--android:scaleX="0.85">-->
 
         <LinearLayout
                 android:id="@+id/grocery_list_select"
