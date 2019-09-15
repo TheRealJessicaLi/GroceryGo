@@ -8,6 +8,6 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
     <style name="ToolbarTheme" parent="ThemeOverlay.AppCompat.Light">
-        <item name="android:fontFamily">@font/Satisfy-Regular</item>
+        <item name="android:fontFamily">@font/satisfy_regular</item>
     </style>
 </resources>
