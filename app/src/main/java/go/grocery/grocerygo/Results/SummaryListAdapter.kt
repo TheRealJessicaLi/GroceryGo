@@ -1,6 +1,8 @@
 package go.grocery.grocerygo.SelectGroceries
 
 import android.content.Context
+import android.content.res.Resources
+import android.provider.Settings.Global.getString
 import android.support.design.widget.CoordinatorLayout.Behavior.setTag
 import android.widget.TextView
 import android.view.ViewGroup
@@ -48,7 +50,7 @@ class SummaryListAdapter(context: Context, private val objects: ArrayList<Summar
             holder = convertView!!.tag as ViewHolder?
         }
         holder!!.textView1!!.text = objects[position].getstr1()
-        holder!!.textView2!!.text = objects[position].getstr2()
+        holder!!.textView2!!.text = "$"+objects[position].getstr2()
         return convertView
     }
 }
