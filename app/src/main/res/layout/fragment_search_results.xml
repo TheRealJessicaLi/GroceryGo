@@ -4,7 +4,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 tools:context=".Results.SearchResultsFragment"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:background="#BEE4E4">
 
     <TextView
             android:id="@+id/we_recommend"
@@ -16,6 +17,16 @@
             android:textSize="15sp"
             android:layout_marginTop="10dp"
             android:layout_alignParentTop="true"/>
+
+    <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/rec_rect"
+            android:layout_alignParentTop="true"
+            android:adjustViewBounds="true"
+            android:layout_marginTop="100dp"
+            android:scaleX="0.85"
+            android:scaleY="1.1"/>
 
     <TextView
             android:id="@+id/store_name"

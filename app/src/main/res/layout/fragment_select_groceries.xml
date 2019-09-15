@@ -50,17 +50,6 @@
                       android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
                       android:onClick="onCheckboxClicked"/>
 
-            <CheckBox android:id="@+id/checkbox_bananas"
-                      android:layout_width="match_parent"
-                      android:layout_height="match_parent"
-                      android:text="Bananas"
-                      android:button="@null"
-                      android:layout_marginRight="18dp"
-                      android:layout_marginLeft="18dp"
-                      android:textSize="17sp"
-                      android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-                      android:onClick="onCheckboxClicked"/>
-
             <CheckBox android:id="@+id/checkbox_beans"
                       android:layout_width="match_parent"
                       android:layout_height="match_parent"
