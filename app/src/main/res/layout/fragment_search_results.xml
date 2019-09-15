@@ -7,6 +7,16 @@
                 android:orientation="vertical"
                 android:background="#BEE4E4">
 
+    <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/rec_rect"
+            android:layout_alignParentTop="true"
+            android:adjustViewBounds="true"
+            android:layout_marginTop="100dp"
+            android:scaleX="0.95"
+            android:scaleY="1.3"/>
+
     <TextView
             android:id="@+id/we_recommend"
             android:layout_width="match_parent"
@@ -15,18 +25,8 @@
             android:textColor="@color/black"
             android:gravity="center_horizontal"
             android:textSize="15sp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="40dp"
             android:layout_alignParentTop="true"/>
-
-    <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/rec_rect"
-            android:layout_alignParentTop="true"
-            android:adjustViewBounds="true"
-            android:layout_marginTop="100dp"
-            android:scaleX="0.85"
-            android:scaleY="1.1"/>
 
     <TextView
             android:id="@+id/store_name"
@@ -42,7 +42,7 @@
             android:id="@+id/address"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="21 Jump Street, City, ON, B1A 4A4"
+            android:text="21 Jump Street, Waterloo, ON, B1A 4A4"
             android:gravity="center_horizontal"
             android:textColor="@color/black"
             android:textSize="18sp"
@@ -79,15 +79,15 @@
             android:textColor="@color/black"
             android:gravity="center_horizontal"
             android:layout_marginBottom="10dp"
-            android:textSize="18sp"
+            android:textSize="15sp"
             android:layout_below="@id/total_price"/>
 
     <ListView
             android:id="@+id/grocery_list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
             android:layout_marginBottom="10dp"
             android:layout_below="@id/breakdown"
             android:layout_above="@+id/new_list_button"/>
@@ -99,7 +99,7 @@
             android:background="@drawable/button_background"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="30dp"
             android:text="Create New List"/>
 
 </RelativeLayout>
