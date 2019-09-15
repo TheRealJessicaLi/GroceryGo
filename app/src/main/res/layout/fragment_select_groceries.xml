@@ -268,9 +268,8 @@
             android:layout_width="120dp"
             android:layout_height="35dp"
             android:layout_centerHorizontal="true"
-            android:text="FINALIZE"
+            android:text="Finalize"
             android:layout_marginBottom="20dp"
-            android:textAllCaps="false"
             android:background="@drawable/button_background"
             android:layout_alignParentBottom="true"/>
 

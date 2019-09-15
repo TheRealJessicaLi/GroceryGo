@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:tools="http://schemas.android.com/tools"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              tools:context=".Results.SearchResultsFragment"
-              android:orientation="vertical">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".Results.SearchResultsFragment"
+                android:orientation="vertical">
 
     <TextView
+            android:id="@+id/we_recommend"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="We recommend you shop at.."
             android:textColor="@color/black"
             android:gravity="center_horizontal"
             android:textSize="15sp"
-            android:layout_marginTop="25dp"/>
+            android:layout_marginTop="10dp"
+            android:layout_alignParentTop="true"/>
 
     <TextView
             android:id="@+id/store_name"
@@ -21,25 +23,30 @@
             android:layout_height="wrap_content"
             android:text="fbjksdfj"
             android:textColor="@color/orange"
-            android:textSize="50sp"
-            android:gravity="center_horizontal"/>
+            android:textSize="40sp"
+            android:gravity="center_horizontal"
+            android:layout_below="@id/we_recommend"/>
 
     <TextView
+            android:id="@+id/address"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="21 Jump Street, City, ON, B1A 4A4"
             android:gravity="center_horizontal"
             android:textColor="@color/black"
-            android:textSize="20sp"/>
+            android:textSize="18sp"
+            android:layout_below="@id/store_name"/>
 
     <TextView
+            android:id="@+id/total_estimate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Your total grocery estimate is:"
             android:textColor="@color/black"
             android:gravity="center_horizontal"
             android:textSize="15sp"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/address"/>
 
     <TextView
             android:id="@+id/total_price"
@@ -47,19 +54,22 @@
             android:layout_height="wrap_content"
             android:text="$2344"
             android:textColor="@color/orange"
-            android:textSize="50sp"
+            android:textSize="40sp"
             android:gravity="center_horizontal"
             android:paddingLeft="25dp"
-            android:paddingRight="25dp"/>
+            android:paddingRight="25dp"
+            android:layout_below="@id/total_estimate"/>
 
     <TextView
+            android:id="@+id/breakdown"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Your Shopping List Breakdown:"
             android:textColor="@color/black"
             android:gravity="center_horizontal"
             android:layout_marginBottom="10dp"
-            android:textSize="20sp"/>
+            android:textSize="18sp"
+            android:layout_below="@id/total_price"/>
 
     <ListView
             android:id="@+id/grocery_list"
@@ -67,6 +77,18 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="25dp"
             android:layout_marginRight="25dp"
-            android:layout_marginBottom="10dp"/>
+            android:layout_marginBottom="10dp"
+            android:layout_below="@id/breakdown"
+            android:layout_above="@+id/new_list_button"/>
 
-</LinearLayout>
+    <Button
+            android:id="@+id/new_list_button"
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            android:background="@drawable/button_background"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:text="Create New List"/>
+
+</RelativeLayout>
