@@ -43,11 +43,6 @@ class SelectGroceriesFragment : Fragment() {
                         shoppingList.add("apples")
                     }
                 }
-                R.id.checkbox_bananas -> {
-                    if (checked) {
-                        shoppingList.add("bananas")
-                    }
-                }
                 R.id.checkbox_beans -> {
                     if (checked) {
                         shoppingList.add("beans")
