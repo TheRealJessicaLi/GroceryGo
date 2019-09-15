@@ -10,6 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 
 import go.grocery.grocerygo.R
+import kotlinx.android.synthetic.main.fragment_shopping_instructions.*
 import kotlinx.android.synthetic.main.fragment_user_info.*
 
 class ShoppingInstructionsFragment : Fragment() {
@@ -20,7 +21,7 @@ class ShoppingInstructionsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        next_button.setOnClickListener {
+        add_button.setOnClickListener {
             val myIntent = Intent(activity, SelectGroceriesActivity::class.java)
             activity!!.startActivity(myIntent)
         }
