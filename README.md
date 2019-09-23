@@ -3,5 +3,5 @@ Hack the North 2019 project: a mobile app that recommends the cheapest place to 
 
 #Screens from the App UI:
 <p>
-    <img src="Display Images/First_Screen.png" />
+    <img src="Display Images/First_Screen.png" style="width: 50%; height: 50%"/>
 </p>
